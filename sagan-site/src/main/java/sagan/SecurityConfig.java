@@ -219,9 +219,9 @@ class SecurityConfig {
             String githubUsername = connection.getDisplayName();
 
             try {
-                if (!signInService.isSpringMember(githubUsername, gitHub)) {
+                /*if (!signInService.isSpringMember(githubUsername, gitHub)) {
                     throw new BadCredentialsException("User not member of required org");
-                }
+                }*/
 
                 MemberProfile member = signInService.getOrCreateMemberProfile(new Long(githubId), gitHub);
                 Authentication authentication = new UsernamePasswordAuthenticationToken(
